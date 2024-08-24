@@ -1,0 +1,1071 @@
+:root {
+    --glass-width: 400px;
+    --glass-width: 25vw;
+    --glass-padding : 80px;
+    --glass-padding : 4vw;
+}
+
+/* MASQUER BARRES DEFILEMENT*/
+html {overflow: scroll;scrollbar-width : none;-ms-overflow-style : none;scroll-behavior: smooth;}
+html::-webkit-scrollbar {display : none;}
+
+@font-face {
+    font-family: 'Chopin Script';
+    src: url('./fonts/ChopinScript.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fleuron';
+    src: url('./fonts/FleuronMixed.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('./fonts/ubuntu.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction';
+    src: url('./fonts/Redaction-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction';
+    src: url('./fonts/Redaction-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction 10';
+    src: url('./fonts/Redaction10-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction 10';
+    src: url('./fonts/Redaction10-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Redaction 20';
+    src: url('./fonts/Redaction20-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction 20';
+    src: url('./fonts/Redaction20-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction 35';
+    src: url('./fonts/Redaction35-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction 35';
+    src: url('./fonts/Redaction35-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction 50';
+    src: url('./fonts/Redaction50-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction 50';
+    src: url('./fonts/Redaction50-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction 70';
+    src: url('./fonts/Redaction70-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction 70';
+    src: url('./fonts/Redaction70-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction 100';
+    src: url('./fonts/Redaction100-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction 100';
+    src: url('./fonts/Redaction100-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+body {
+    margin : 0;
+    width : 100vw;
+
+    overflow : hidden;
+
+    font-family : 'Ubuntu';
+    font-size : 1.5vw;
+
+
+    pointer-events: none;
+}
+
+h1 {
+    font-size : 4em;
+    font-family : 'Redaction 70';
+
+    pointer-events: auto;
+}
+
+h2 {
+    font-size : 2.5em;
+    font-family : 'Redaction 35';
+
+    pointer-events: auto;
+}
+
+h1:hover, h2:hover {
+    font-family : 'Redaction 100';
+}
+
+@keyframes leverRideau {
+    0% {top : 0}
+    80% {top : 0}
+    100% {top : -100%}
+}
+
+@keyframes leverRideauZZIN {
+    0% {top : 0}
+    80% {top : 0}
+    100% {top : -100%}
+}
+
+#loading-tile {
+    position : fixed;
+    width : 100vw;
+    height : 100vh;
+    top : -100%;
+
+    background-color : blue;
+    color : #ff80b2ff;
+    font-size : 10vw;
+
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    gap : 1vw;
+
+    z-index : 10;
+
+    animation : leverRideau 1s ease;
+    pointer-events: auto;
+}
+
+#loading-tile span:nth-child(1){font-family : 'Redaction 100';}
+#loading-tile span:nth-child(2){font-family : 'Redaction 70';}
+#loading-tile span:nth-child(3){font-family : 'Redaction 50';}
+#loading-tile span:nth-child(4){font-family : 'Redaction 35';}
+#loading-tile span:nth-child(5){font-family : 'Redaction 20';}
+#loading-tile span:nth-child(6){font-family : 'Redaction 10';}
+#loading-tile span:nth-child(7){font-family : 'Redaction';}
+#loading-tile span:nth-child(8){font-family : 'Fleuron';}
+#loading-tile span:nth-child(9){font-family : 'Ubuntu';padding-bottom : 1.4vw;font-size : 10.2vw;}
+#loading-tile span:nth-child(10){font-family : 'Chopin Script';margin-left : -5vw;}
+
+
+#pink-tile-container {
+    width : 100vw;
+    height : 170vh;
+}
+
+#pink-tile {
+    width : 100vw;
+    height : 100vh;
+    background-color : #ff80b2ff;
+
+    pointer-events: auto;
+}
+
+#logo-black {
+    position : absolute;
+    top : 20px;
+    right : 20px;
+    width : 100px;
+    aspect-ratio : 47 / 51;
+
+    background-image : url('./assets/logo-black.svg');
+    background-size : contain;
+    background-repeat : no-repeat;
+}
+
+.nav-list {
+    list-style-type: none; /* Retire les puces de la liste */
+    padding: 0; /* Retire le padding par défaut */
+    margin: 0; /* Retire la marge par défaut */
+
+    position : absolute;
+    top : 150px;
+    right : 21px;
+    width : 110px;
+    text-align : right;
+}
+
+.nav-list li {
+    margin-bottom: 0; /* Espace entre les éléments de la liste */
+    opacity: 0.8;
+    line-height : 0.8;
+    margin-bottom : 10px;
+}
+
+.nav-list li:hover {
+    opacity: 1;
+}
+
+.nav-list a {
+    text-decoration : none; /* Enlève le soulignement des liens */
+    color : black; /* Couleur du texte */
+     /* Taille de police par défaut */
+    font-weight : bold;
+}
+
+.main-link {
+    font-size : 0.7em;
+}
+
+.secondary-link {
+    font-size : 0.6em;
+    padding-right : 5px;
+}
+
+.nav-list li:nth-child(1) {
+    opacity: 1;
+}
+
+#welcomeRow1 {
+    margin : 0;
+    position : absolute;
+    top : 6%;
+    left : 3%;
+
+    font-size : 25vh;
+    font-family : 'Fleuron';
+}
+
+#welcomeRow2 {
+    margin : 0;
+    position : absolute;
+    top : 22%;
+    right : 20%;
+
+    font-size : 25vh;
+    font-family : 'Chopin Script', 'Liga Sans';
+
+    transform: rotate(-8deg);
+}
+
+@keyframes pixelizeFontv2 {
+    0% { font-family: 'Redaction'; }
+    45% { font-family: 'Redaction 10'; }
+    50% { font-family: 'Redaction 20'; }
+    55% { font-family: 'Redaction 35'; }
+    60% { font-family: 'Redaction 50'; }
+    65% { font-family: 'Redaction 70'; }
+    70% { font-family: 'Redaction 100'; }
+    75% { font-family: 'Redaction 70'; }
+    80% { font-family: 'Redaction 50'; }
+    85% { font-family: 'Redaction 35'; }
+    90% { font-family: 'Redaction 20'; }
+    95% { font-family: 'Redaction 10'; }
+    100% { font-family: 'Redaction'; }
+}
+
+#zzin-big {
+    position : absolute;
+    right : 10%;
+    margin : 0;
+    margin-bottom : -0.3em;
+    bottom : 10%;
+
+    font-size : 20vw;
+    font-family : Redaction;
+
+    animation: pixelizeFontv2 5s infinite cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+#down-arrow {
+    position : absolute;
+    right : 30%;
+    bottom : 1%;
+    width : 70px;
+    height : 40px;
+
+    background-image : url('./assets/down-arrow.svg');
+    background-size : contain;
+    background-repeat : no-repeat;
+}
+
+#presta {
+    position : absolute;
+    top : 31%;
+    right : 60%;
+
+    font-size : 1.2em;
+
+    display : flex;
+    flex-direction : column;
+}
+
+#presta p:last-child {
+    margin-top : -1em;
+    margin-left : 7em;
+}
+
+#wZ {
+    transform: rotate(-90deg);
+    font-size : 1em;
+    margin : 0;
+    padding : 0;
+
+    position : absolute;
+    right : -2em;
+    bottom : 4em;
+}
+
+#MG {
+    transform: rotate(-90deg);
+
+    position : absolute;
+    left : -5.5em;
+    top : calc(50% - 7em);
+
+    font-size : 1.2em;
+    /*text-decoration: line-through;*/
+
+}
+
+#portrait {
+    position : relative;
+    top : 50%;
+    left : 10%;
+    width : 25%;
+    height : 100%;
+    max-height : 60vw;
+
+    background-image : url('./images/portait.jpg');
+    background-size : 250%;
+    background-position : 20% 56%;
+    background-repeat : no-repeat;
+}
+
+#presentation {
+    position : absolute;
+    bottom : 0;
+    margin : 10px;
+
+    font-weight : bold;
+    text-align: left;
+    color : white;
+    font-size : 1.2em;
+
+    overflow: auto;
+}
+
+#whyZZIN {
+    position : absolute;
+    left : 50%;
+    top : 115%;
+    width : 25%;
+    max-height : 70vh;
+
+    font-size : 1em;
+
+    background-color: white;
+    overflow : hidden;
+    padding : 40px;
+}
+
+
+#work-tile-container {
+    width : 100vw;
+    height : 290vh;
+    margin : 10vh 0;
+}
+
+#work-tile {
+    position : absolute;
+    width : 100%;
+}
+
+#work-tile h1 {
+    margin-left : 10%;
+    width : 300px;
+}
+
+#ZZINblur {
+    position : absolute;
+    width : 25vw;
+    top : 20vh;
+    right : 16vw;
+
+    z-index : -2;
+}
+
+.glass-container {
+    position : relative;
+
+    box-sizing: border-box;
+    margin : 0 4%;
+
+    width : 92vw;
+    top : 25vw;
+
+    display : flex;
+    flex-wrap : wrap;
+    justify-content : space-evenly;
+}
+
+.glass-container .col {
+    display : flex;
+    flex-direction : column;
+    row-gap : 12vw;
+}
+
+.glass-container .col:first-child {
+    margin-top : -40vh;
+}
+
+
+.glass {
+    padding : var(--glass-padding);
+    width : var(--glass-width);
+
+    margin : 4%;
+
+    pointer-events: auto;
+
+/* From https://css.glass */
+background: rgba(118, 118, 118, 0.1);
+/*baroundox-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);*/
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+}
+
+.glass .grid {
+    display : grid;
+    grid-template-columns : repeat(4, 1fr);
+    grid-template-rows : repeat(7, 1fr);
+    gap : 0;
+
+    width : 100%;
+    aspect-ratio: 4 / 7;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow : hidden;
+}
+
+#PhysMOD-display .cell img {
+    width : 70%;
+}
+
+#Awal-display .cell img {
+    height : 70%;
+}
+
+#PhysMOD-display .cell:nth-child(1) {grid-column: 1 / 5;grid-row: 1 / 5;
+    background-color : white;}
+#PhysMOD-display .cell:nth-child(2) {grid-column: 1 / 3;grid-row: 5 / 7;
+    background-color : white;}
+#PhysMOD-display .cell:nth-child(3) {grid-column: 3 / 5;grid-row: 5 / 7;
+    background-color : #13678bff;}
+#PhysMOD-display .cell:nth-child(4) {grid-column: 1 / 3;grid-row: 7;
+    background-color : #13678bff;}
+#PhysMOD-display .cell:nth-child(5) {grid-column: 3 / 5;grid-row: 7;
+    background-color : black;}
+#PhysMOD-display .cell:nth-child(6) {grid-column: 1 / 5;grid-row: 7;
+    background-color : transparent;}
+
+#Awal-display .cell:nth-child(1) {grid-column: 1 / 5;grid-row: 1 / 5;
+    background-color : #ffccaaff;}
+#Awal-display .cell:nth-child(2) {grid-column: 1 / 3;grid-row: 5 / 7;
+    background-color : #4e84a6ff;}
+#Awal-display .cell:nth-child(3) {grid-column: 3 / 5;grid-row: 5 / 7;
+    background-color : white;}
+#Awal-display .cell:nth-child(4) {grid-column: 1;grid-row: 7;
+    background-color : #ffccaaff;}
+#Awal-display .cell:nth-child(5) {grid-column: 2;grid-row: 7;
+    background-color : white;}
+#Awal-display .cell:nth-child(6) {grid-column: 3;grid-row: 7;
+    background-color : #da2919ff;}
+#Awal-display .cell:nth-child(7) {grid-column: 4;grid-row: 7;
+    background-color : black;}
+
+.glass p {
+    margin : 60px -30px -30px -30px;
+    text-align : justify;
+
+}
+
+#cell-back-P, #cell-back-A {
+    position : absolute;
+
+    margin : calc(var(--glass-padding) - 10px);
+
+    width : calc(var(--glass-width));
+    aspect-ratio: 4 / 7;
+
+    z-index : -1;
+    opacity : 0.3;
+
+    background-color : transparent;
+    display : none;
+}
+
+#cell-back-P {
+    left : calc((100vw - (2*(var(--glass-width) + (2*var(--glass-padding))))) / 3);
+    top : -40vh;
+    background-color : #3aa3bdff;
+    border : 10px #3aa3bdff solid;
+    opacity : 0.1;
+}
+
+#cell-back-A {
+    right : calc((100vw - (2*(var(--glass-width) + (2*var(--glass-padding))))) / 3);
+    top : 0;
+    background-color : #ffccaaff;
+    border : 10px #ffccaaff solid;
+}
+
+
+#yourProject {
+    aspect-ratio : 1 / 1;
+    padding : var(--glass-padding);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow : hidden;
+
+    background-image : url("./assets/yourProjectButtonV2.svg");
+    background-size : 105%;
+    background-position : 50% 50%;
+    background-repeat : no-repeat;
+
+}
+
+#logo-cyan-container {
+    width : var(--glass-width);
+    height : 20vw;
+    padding : var(--glass-padding);
+
+    z-index : -2;
+}
+
+@keyframes scaling {
+    0% {width : 100px}
+    50% {width : 100%}
+    100% {width : 100px}
+}
+
+@keyframes moving {
+    0% {left : 0}
+    50% {left : calc(100% - 9vw)}
+    100% {left : 0}
+}
+
+#logo-cyan {
+    position : relative;
+    width : 9vw;
+    aspect-ratio : 47 / 51;
+
+    background-image : url('./assets/logo-cyan.svg');
+    background-size : contain;
+    background-repeat : no-repeat;
+
+    border: 1px dashed blue;
+
+    animation : moving 6s ease-in-out infinite;
+}
+
+#logo-cyan img {
+    width : 15px;
+    position: absolute;
+}
+
+#logo-cyan img:nth-child(1) {
+    top : -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+#logo-cyan img:nth-child(2) {
+    top : -12px;
+    left: 100%;
+    transform: rotate(-45deg);
+}
+
+#logo-cyan img:nth-child(3) {
+    top : 50%;
+    left: calc(100% + 2px);
+    transform: translateY(-50%);
+}
+
+#logo-cyan img:nth-child(4) {
+    bottom : -12px;
+    left: 100%;
+    transform: rotate(45deg);
+}
+
+#logo-cyan img:nth-child(5) {
+    bottom : -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+#logo-cyan img:nth-child(6) {
+    bottom : -12px;
+    left: -15px;
+    transform: rotate(-45deg);
+}
+
+#logo-cyan img:nth-child(7) {
+    top : 50%;
+    left: -17px;
+    transform: translateY(-50%);
+}
+
+#logo-cyan img:nth-child(8) {
+    top : -12px;
+    left: -15px;
+    transform: rotate(45deg);
+}
+
+#processus-tile-container {
+    width : 100vw;
+    height : 100vh;
+
+    display : flex;
+    justify-content : center;
+    align-items : center;
+
+}
+
+#processus-tile {
+    position : absolute;
+
+    width : 80vw;
+    height : 90vh;
+
+    background-color : red;
+    background-image : url("./images/porcelaine.jpg");
+    background-size : 30%;
+    background-position : 50% 50%;
+    background-repeat : repeat;
+
+    display : flex;
+    justify-content : center;
+    align-items : center;
+
+
+    pointer-events: auto;
+
+}
+
+#processus-tile h2 {
+    position : absolute;
+    right : 0;
+    top : 0;
+    margin-top : 0vh;
+    margin-right : 0;
+    width : 29vw;
+
+    text-align: right;
+    color : red;
+    color : #3762a7;
+    background-color : white;
+
+}
+
+#processus-tile div {
+    width : calc(100% - 420px);
+    height : calc(100% - 340px);
+
+    background-color : white;
+
+    display : flex;
+    flex-direction : column;
+    justify-content : space-evenly;
+
+    font-family : 'Chopin Script';
+    font-size : 2.5vw;
+    color : #02216eff;
+
+}
+
+#processus-tile span {
+    margin-left : 5vw;
+}
+
+#autre-tile-container {
+    width : 100vw;
+    height : 210vh;
+}
+
+#autre-tile {
+    position : absolute;
+}
+
+#autre-tile h2:first-child {
+    position : absolute;
+    left : 0;
+    top : 13vh;
+    margin-left : 10%;
+    width : 5em;
+
+    text-align: left;
+
+}
+
+#autre-tile .glass-container {
+    margin-top : -30vh;
+}
+
+#autre-tile .glass-container .col:first-child {
+    margin-top : 40vh;
+}
+
+#autre-tile img {
+    width : 100%;
+}
+
+#autre-tile .col:last-child .glass:last-child {
+    aspect-ratio : 1 / 1;
+
+    background-image : url("./images/code.gif");
+    background-size : cover;
+    background-repeat : no-repeat;
+
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+#autre-tile .col:last-child .glass:last-child img {
+    opacity : 0;
+}
+
+#gttitle {
+    position : absolute;
+    bottom : 5vh;
+    left : 20vw;
+
+    color : #3ad837;
+}
+
+#background {
+    position : fixed;
+    width : 100vw;
+    height : 100vh;
+    top : 0;
+    left : 0;
+
+    z-index : -1;
+    overflow : hidden;
+
+    pointer-events: auto;
+}
+
+#logo-pink {
+    position : absolute;
+    top : 20px;
+    right : 20px;
+    width : 100px;
+    aspect-ratio : 47 / 51;
+
+    background-image : url('./assets/logo-pink.svg');
+    background-size : contain;
+    background-repeat : no-repeat;
+}
+
+#logo-pink:hover {
+    background-image : url('./assets/logo-blue.svg');
+}
+
+#contact-banner {
+    margin : 0;
+    position : absolute;
+    width : 100%;
+    height : 9vw;
+    bottom : -2vw;
+
+    color : #ff80b2ff;
+    font-size : 9vw;
+    font-family : 'Redaction 35';
+    font-weight : bold;
+}
+
+#contact-banner:hover {
+
+    color : #0000ff;
+    font-size : 9vw;
+    font-family : 'Redaction 70';
+}
+
+@keyframes moveEmail1 {
+    0% {right : -67%}
+    100% {right : 100%}
+}
+
+@keyframes moveEmail2 {
+    0% {right : 16%}
+    50% {right : 100%}
+    50.01% {right : -67%}
+    100% {right : 16%}
+}
+
+#contact-banner span {
+    margin : 0;
+    padding : 0;
+
+    position : absolute;
+    bottom : 0;
+}
+
+#contact-banner span:nth-child(1) {
+    animation : moveEmail1 20s infinite linear;
+}
+
+#contact-banner span:nth-child(2) {
+    right : 0;
+    animation : moveEmail2 20s infinite linear;
+}
+
+#contact-tile {
+    width : 100vw;
+    height : 100vh;
+
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    text-align : center;
+}
+
+#contact-tile p {
+    width : 30vw;
+    font-family : 'Redaction';
+    color : #0000ff;
+    font-size : 1.3em;
+    text-align : center;
+}
+
+#line-top {
+    position : absolute;
+    top : 20px;
+    left : 20px;
+    width : calc(100% - 100px - 3*20px);
+    height : 4px;
+
+    background-color : #ff80b2;
+    background-color : #0000ff;
+}
+
+#line-left {
+    position : absolute;
+    top : 20px;
+    left : 20px;
+    width : 4px;
+    height : calc(80% - 2*20px);
+
+    background: linear-gradient(to top, transparent, #ff80b2);
+    background: linear-gradient(to top, transparent, #0000ff);
+}
+
+#line-right {
+    position : absolute;
+    top : 150px;
+    right : 20px;
+    width : 4px;
+    height : calc(80% - 110px - 3*20px);
+
+    background: linear-gradient(to top, transparent, #ff80b2);
+    background: linear-gradient(to top, transparent, #0000ff);
+}
+
+#line-right-logo {
+    position : absolute;
+    top : 20px;
+    right : 140px;
+    width : 4px;
+    height : 134px;
+
+    background-color : #ff80b2;
+    background-color : #0000ff;
+}
+
+#line-top-logo {
+    position : absolute;
+    top : 150px;
+    right : 20px;
+    width : 124px;
+    height : 4px;
+
+    background-color : #ff80b2;
+    background-color : #0000ff;
+}
+
+
+
+
+@media (max-width : 1500px) {
+    body {
+        font-size : 22px;
+    }
+    #welcomeRow1 {
+        font-size : 14vw;
+    }
+
+    :root {
+        --glass-width: 350px;
+        --glass-padding : 70px;
+    }
+}
+
+@media (max-width : 1000px) {
+}
+
+@media (max-width: 480px) {
+
+    :root {
+        --glass-width: 350px;
+        --glass-padding : 50px;
+    }
+    body {
+        font-size : 5vw;
+    }
+
+    #welcomeRow1 {
+        font-size : 16vw;
+        left : 5%;
+        top : 3%;
+    }
+    #welcomeRow2 {
+        font-size : 30vw;
+        left : 7%;
+        top : 6.5%;
+    }
+
+    #logo-black {
+        height : 10%;
+        width : auto;
+        top : 13%;
+        right : 6%;
+    }
+
+    nav {
+        display : none;
+    }
+
+    #zzin-big {
+        top : 25%;
+        font-size : 39vw;
+        right : 5%;
+    }
+
+    #portrait {
+        width : 60%;
+        height : 70%;
+        min-height : 550px;
+        max-height : none;
+        top : 57%;
+        left : 15%;
+
+        background-size : 250%;
+        background-position : 20% 63%;
+    }
+
+    #presentation {
+        font-size : 1em;
+    }
+
+    #MG {
+        top: calc(61% - 7em);
+    }
+
+    #wZ {
+        transform: rotate(-90deg);
+        font-size : 1.3em;
+        margin : 0;
+        padding : 0;
+
+        position : absolute;
+        right : -1.8em;
+        bottom : 6.5em;
+    }
+
+    #presta {
+        width : 90%;
+        position: absolute;
+        left: 50%;
+        top : 43%;
+        transform: translateX(-50%);
+        text-align : center;
+    }
+
+    #presta p:last-child {
+        margin-left : 0;
+    }
+
+    #down-arrow {
+        position : absolute;
+        right : 1em;
+        bottom : 1.3em;
+        width : 2.5em;
+        height : 1.5em;
+
+        background-image : url('./assets/down-arrow.svg');
+        background-size : contain;
+        background-repeat : no-repeat;
+    }
+
+    .glass p {
+        display : none;
+    }
+}

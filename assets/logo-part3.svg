@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="46.154949mm"
+   height="10.135652mm"
+   viewBox="0 0 46.154949 10.135652"
+   version="1.1"
+   id="svg23928"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="logo-part3.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview23930"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="3.1177081"
+     inkscape:cx="94.460415"
+     inkscape:cy="-26.461746"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs23925" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(23.834549,-109.08805)">
+    <path
+       style="display:inline;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:1.376;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -14.117,114.4077 -7.1499,4.128 h 42.8993 v -8.256 l -7.1499,4.128 H 0.1828 l -7.1499,-4.128 z"
+       id="path1883"
+       inkscape:export-xdpi="373.05798"
+       inkscape:export-ydpi="373.05798"
+       sodipodi:nodetypes="cccccccc" />
+    <circle
+       style="fill:#ffffff;stroke:none;stroke-width:0.779818;stroke-linecap:round;stroke-opacity:0.973669"
+       id="path37931"
+       cx="-6.9809518"
+       cy="114.95322"
+       r="2.4491417" />
+  </g>
+</svg>
