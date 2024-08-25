@@ -1,8 +1,9 @@
 :root {
     --glass-width: 400px;
-    --glass-width: 25vw;
+    --glass-width: 20vw;
+    --glass-min-width: 300px;
     --glass-padding : 80px;
-    --glass-padding : 4vw;
+    --glass-padding : clamp(60px, 4vw, 200px);
 }
 
 /* MASQUER BARRES DEFILEMENT*/
@@ -420,7 +421,7 @@ h1:hover, h2:hover {
 
 #work-tile-container {
     width : 100vw;
-    height : 290vh;
+    height : calc(200vh + 35vw);
     margin : 10vh 0;
 }
 
@@ -431,7 +432,7 @@ h1:hover, h2:hover {
 
 #work-tile h1 {
     margin-left : 10%;
-    width : 300px;
+    width : 5em;
 }
 
 #ZZINblur {
@@ -447,16 +448,18 @@ h1:hover, h2:hover {
     position : relative;
 
     box-sizing: border-box;
-    margin : 0 4%;
 
-    width : 92vw;
+    width : 100vw;
     top : 25vw;
 
+/*
     display : flex;
     flex-wrap : wrap;
     justify-content : space-evenly;
+*/
 }
 
+/*
 .glass-container .col {
     display : flex;
     flex-direction : column;
@@ -466,13 +469,22 @@ h1:hover, h2:hover {
 .glass-container .col:first-child {
     margin-top : -40vh;
 }
+*/
 
+.glass-container .row {
+    top : 0;
+    left : 0;
+    width : 100%;
+    display : flex;
+    justify-content : space-evenly;
+
+    margin-bottom : 10%;
+}
 
 .glass {
     padding : var(--glass-padding);
     width : var(--glass-width);
-
-    margin : 4%;
+    min-width : var(--glass-min-width);
 
     pointer-events: auto;
 
@@ -481,6 +493,16 @@ background: rgba(118, 118, 118, 0.1);
 /*baroundox-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);*/
 backdrop-filter: blur(20px);
 -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-container:first-child .row .glass:last-child {
+    margin-top : 20%;
+    margin-top : 0%;
+}
+
+#work-tile .glass-container .row .glass:first-child {
+    margin-bottom : 20%;
+    margin-top : -20%;
 }
 
 .glass .grid {
@@ -538,7 +560,8 @@ backdrop-filter: blur(20px);
     background-color : black;}
 
 .glass p {
-    margin : 60px -30px -30px -30px;
+    margin : -8%;
+    margin-top : 14%;
     text-align : justify;
 
 }
@@ -593,8 +616,10 @@ backdrop-filter: blur(20px);
 
 #logo-cyan-container {
     width : var(--glass-width);
+    min-width : var(--glass-min-width);
     height : 20vw;
     padding : var(--glass-padding);
+    padding-top : 0;
 
     z-index : -2;
 }
@@ -746,37 +771,35 @@ backdrop-filter: blur(20px);
 
 #autre-tile-container {
     width : 100vw;
-    height : 210vh;
+    height : 230vh;
 }
 
 #autre-tile {
     position : absolute;
+    margin-top : 10vh;
 }
 
-#autre-tile h2:first-child {
-    position : absolute;
-    left : 0;
-    top : 13vh;
-    margin-left : 10%;
+#ap-title {
+    margin-left: 10%;
     width : 5em;
-
-    text-align: left;
-
 }
+
 
 #autre-tile .glass-container {
     margin-top : -30vh;
-}
-
-#autre-tile .glass-container .col:first-child {
-    margin-top : 40vh;
 }
 
 #autre-tile img {
     width : 100%;
 }
 
-#autre-tile .col:last-child .glass:last-child {
+
+#autre-tile .glass-container .row .glass:last-child {
+    margin-bottom : 15%;
+    margin-top : -15%;
+}
+
+#autre-tile .row:last-child .glass:last-child {
     aspect-ratio : 1 / 1;
 
     background-image : url("./images/code.gif");
@@ -788,16 +811,16 @@ backdrop-filter: blur(20px);
     align-items : center;
 }
 
-#autre-tile .col:last-child .glass:last-child img {
-    opacity : 0;
-}
-
-#gttitle {
-    position : absolute;
-    bottom : 5vh;
-    left : 20vw;
-
+#gittitle {
     color : #3ad837;
+    margin-bottom : 0;
+    margin-top : calc(max(var(--glass-width), var(--glass-min-width)) - (2em - var(--glass-padding)));;
+    margin-left : calc(var(--glass-padding));
+    margin-right : calc(max(var(--glass-width), var(--glass-min-width)) - (5em - var(--glass-padding)));
+    margin-top : calc(var(--glass-padding)+(max(var(--glass-width), var(--glass-min-width))/2));
+    width : 5em;
+
+    text-align: left;
 }
 
 #background {
@@ -961,22 +984,12 @@ backdrop-filter: blur(20px);
     #welcomeRow1 {
         font-size : 14vw;
     }
-
-    :root {
-        --glass-width: 350px;
-        --glass-padding : 70px;
-    }
 }
 
 @media (max-width : 1000px) {
 }
 
 @media (max-width: 480px) {
-
-    :root {
-        --glass-width: 350px;
-        --glass-padding : 50px;
-    }
     body {
         font-size : 5vw;
     }
