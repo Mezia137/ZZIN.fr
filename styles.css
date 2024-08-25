@@ -990,8 +990,21 @@ backdrop-filter: blur(20px);
 }
 
 @media (max-width: 480px) {
+
+    :root {
+        --glass-width: 220px;
+        --glass-min-width: 220px;
+
+        --glass-padding : 40px;
+    }
+
     body {
         font-size : 5vw;
+    }
+
+    #pink-tile-container {
+        width : 100vw;
+        height : calc(130vh + 575px);
     }
 
     #welcomeRow1 {
@@ -1078,7 +1091,173 @@ backdrop-filter: blur(20px);
         background-repeat : no-repeat;
     }
 
+    #whyZZIN {
+        left : 0;
+        top : max(130%, calc(100% + 275px));
+        width : 70%;
+        max-height : 70vh;
+
+        font-size : 1em;
+
+        background-color: transparent;
+        overflow : hidden;
+        padding : 40px;
+
+    }
+
+    #work-tile-container {
+        width : 100vw;
+        height : calc(200vh + 35vw);
+        margin : 0;
+    }
+
+    #work-tile h1 {
+        margin : 0 20px;
+        font-size : 3.5em;
+        width : calc(100vw - 40px);
+
+        text-align : right;
+    }
+
+    #ZZINblur {
+        width : 60vw;
+        top : -5vh;
+        right : 0px;
+
+        z-index : -2;
+
+        display : none;
+    }
+
+    .TorS {
+        position : relative;
+        top : 5vw;
+        left : 30px;
+        font-family : "Redaction 35";
+        font-weight : bold;
+    }
+
+    .glass-container {
+        top : 4vw;
+    }
+
+    #work-tile .glass-container .row .glass:first-child, #autre-tile .glass-container .row .glass:last-child {
+        margin-bottom : 0;
+        margin-top : 0;
+    }
+
+    #work-tile .glass-container .row {
+        width : calc(100vw - 60px);
+        padding : 30px;
+        margin : 0;
+    }
+
+    #work-tile .glass-container .row:first-child {
+        gap : 20px;
+        overflow-x: auto;
+    }
+
     .glass p {
         display : none;
+    }
+    /*
+    #work-tile .glass-container .row .glass:hover p {
+        display : block;
+    }
+    */
+    #work-tile .row:nth-child(2) {
+        display : flex;
+        flex-direction : column;
+        gap : 50px;
+    }
+
+    #yourProject, #logo-cyan-container {
+        width : calc(100% - (2*var(--glass-padding)));
+    }
+
+    @keyframes moving {
+        0% {left : 0}
+        50% {left : calc(100% - 100px)}
+        100% {left : 0}
+    }
+
+    #logo-cyan {
+        width : 100px;
+        animation : moving 4s ease-in-out infinite;
+    }
+
+    @keyframes moving {
+        0% {left : 0}
+        50% {left : calc(100% - 100px)}
+        100% {left : 0}
+    }
+
+
+    #processus-tile {
+        display : none;
+    }
+
+
+    #autre-tile h2 {
+        margin : 0 20px;
+        width : calc(100vw - 40px);
+
+        text-align : left;
+
+    }
+
+    #autre-tile .glass-container .row {
+        width : calc(100vw - 60px);
+        padding : 30px;
+        margin : 0;
+    }
+
+    #autre-tile .glass-container .row:first-child {
+        gap : 20px;
+        overflow-x: auto;
+    }
+
+    #autre-tile .glass-container {
+        margin-top : 0vh;
+    }
+
+    #autre-tile .glass-container .row:first-child .glass:first-child {
+        order : 2;
+    }
+
+    #autre-tile .glass-container .row:first-child .glass:nth-child(2) {
+        order : 1;
+    }
+
+    #gittitle {
+        display : none;
+    }
+
+    #gttl1, #gttl2 {
+        position : absolute;
+        color : #3ad837;
+        font-size : 2.5em;
+        font-family : 'Redaction 35';
+
+        pointer-events: auto;
+    }
+
+    #gttl1 {
+        transform : rotate(-90deg);
+        margin : -0.15em;
+        left : 0;
+        margin-top : 1.7em;
+    }
+
+    #autre-tile .row:last-child {
+        justify-content : left;
+    }
+
+    #autre-tile .row:last-child .glass:last-child {
+        position : relative;
+        left : 2.4em;
+        top : 3em;
+        width : 45vw;
+        min-width : 45vw;
     }
 }
