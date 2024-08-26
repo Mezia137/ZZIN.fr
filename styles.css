@@ -165,20 +165,22 @@ h1:hover, h2:hover {
 @keyframes leverRideau {
     0% {top : 0}
     80% {top : 0}
-    100% {top : -100%}
+    100% {top : -130%}
 }
 
 @keyframes leverRideauZZIN {
     0% {top : 0}
-    80% {top : 0}
+    70% {top : 0}
     100% {top : -100%}
 }
+
+
 
 #loading-tile {
     position : fixed;
     width : 100vw;
     height : 100vh;
-    top : -100%;
+    top : -130%;
 
     background-color : blue;
     color : #ff80b2ff;
@@ -191,8 +193,30 @@ h1:hover, h2:hover {
 
     z-index : 10;
 
-    animation : leverRideau 1s ease;
+    animation : leverRideau 4s ease;
     pointer-events: auto;
+}
+
+#loading-tile p{
+    position : absolute;
+    width : 80vw;
+    top : 5%;
+
+    font-size : 0.6em;
+    font-weight : bold;
+    text-align : center;
+
+    display : none;
+}
+
+#loading-tile div{
+    position : absolute;
+    top : 50%;
+    transform : translateY(-50%);
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    gap : 1vw;
 }
 
 #loading-tile span:nth-child(1){font-family : 'Redaction 100';}
@@ -607,7 +631,7 @@ backdrop-filter: blur(20px);
 
     overflow : hidden;
 
-    background-image : url("./assets/yourProjectButtonV2.svg");
+    background-image : url("./assets/yourProjectButtonV1.svg");
     background-size : 105%;
     background-position : 50% 50%;
     background-repeat : no-repeat;
@@ -823,6 +847,10 @@ backdrop-filter: blur(20px);
     text-align: left;
 }
 
+.TorS, #gttl1, #gttl2, #gttl3, #gttl4 {
+    display : none;
+}
+
 #background {
     position : fixed;
     width : 100vw;
@@ -1002,6 +1030,10 @@ backdrop-filter: blur(20px);
         font-size : 5vw;
     }
 
+    #loading-tile p {
+        display : block;
+    }
+
     #pink-tile-container {
         width : 100vw;
         height : calc(130vh + 575px);
@@ -1130,6 +1162,7 @@ backdrop-filter: blur(20px);
     }
 
     .TorS {
+        display : inline;
         position : relative;
         top : 5vw;
         left : 30px;
@@ -1173,6 +1206,10 @@ backdrop-filter: blur(20px);
 
     #yourProject, #logo-cyan-container {
         width : calc(100% - (2*var(--glass-padding)));
+    }
+
+    #yourProject {
+        background-image : url("./assets/yourProjectButtonV2.svg");
     }
 
     @keyframes moving {
@@ -1233,7 +1270,14 @@ backdrop-filter: blur(20px);
         display : none;
     }
 
-    #gttl1, #gttl2 {
+    #autre-tile .glass-container .row:last-child {
+        display : block;
+        height : calc(100vw - 60px);
+
+    }
+
+    #gttl1, #gttl2, #gttl3, #gttl4  {
+        display : inline;
         position : absolute;
         color : #3ad837;
         font-size : 2.5em;
@@ -1244,20 +1288,37 @@ backdrop-filter: blur(20px);
 
     #gttl1 {
         transform : rotate(-90deg);
-        margin : -0.15em;
+        margin-left : calc(30px - 0.75em);
         left : 0;
-        margin-top : 1.7em;
+        margin-top : calc((30px - 0.8em) + 1.7em);
     }
 
-    #autre-tile .row:last-child {
-        justify-content : left;
+    #gttl2 {
+        margin-top : calc(30px - 0.8em);
+    }
+
+    #gttl3 {
+        transform : rotate(90deg);
+        margin-right : calc(30px - 0.75em);
+        right : 0;
+        bottom : 0;
+        margin-bottom : calc((30px - 0.8em) + 2.3em);
+    }
+
+    #gttl4 {
+        transform : rotate(180deg);
+        margin-bottom : calc((30px - 0.8em) + 0.6em);
+        right : 0;
+        bottom : 0;
+        margin-right : calc(30px)
     }
 
     #autre-tile .row:last-child .glass:last-child {
         position : relative;
-        left : 2.4em;
-        top : 3em;
-        width : 45vw;
-        min-width : 45vw;
+        left : 50%;
+        top : 50%;
+        transform : translate(-50%, -50%);
+        min-width : 100px;
+        width : calc(100vw - (120px + 5.5em));
     }
 }
