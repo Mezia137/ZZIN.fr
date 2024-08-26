@@ -1356,6 +1356,8 @@ backdrop-filter: blur(20px);
         background-size : contain;
         background-repeat : no-repeat;
         background-position: bottom;
+
+        pointer-events : auto;
     }
 
 
