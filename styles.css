@@ -947,6 +947,10 @@ backdrop-filter: blur(20px);
     text-align : center;
 }
 
+#contact-tile a {
+    display : none;
+}
+
 #line-top {
     position : absolute;
     top : 20px;
@@ -1139,7 +1143,7 @@ backdrop-filter: blur(20px);
 
     #work-tile-container {
         width : 100vw;
-        height : calc(200vh + 35vw);
+        height : calc(400vw - 40vh);
         margin : 0;
     }
 
@@ -1230,8 +1234,12 @@ backdrop-filter: blur(20px);
     }
 
 
-    #processus-tile {
+    #processus-tile-container {
         display : none;
+    }
+
+    #autre-tile-container {
+        height : 150vh;
     }
 
 
@@ -1320,5 +1328,42 @@ backdrop-filter: blur(20px);
         transform : translate(-50%, -50%);
         min-width : 100px;
         width : calc(100vw - (120px + 5.5em));
+    }
+
+
+    #contact-tile {
+        width : 100vw;
+        height : 100vh;
+
+        position: relative;
+    }
+
+    #contact-tile p {
+        position : absolute;
+        top : 30%;
+        width : 70vw;
+    }
+
+    #contact-tile a {
+        display : inline;
+        position : absolute;
+        bottom : 0;
+        left : 0;
+        width : 100vw;
+        aspect-ratio : 1 / 1;
+
+        background-image : url('./assets/contact-amas.svg');
+        background-size : contain;
+        background-repeat : no-repeat;
+        background-position: bottom;
+    }
+
+
+    #logo-pink {
+        width : 70px;
+    }
+
+    #contact-banner {
+        display : none;
     }
 }
