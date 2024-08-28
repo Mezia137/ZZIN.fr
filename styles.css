@@ -162,6 +162,25 @@ h1:hover, h2:hover {
     font-family : 'Redaction 100';
 }
 
+a {
+    color: black; /* Couleur des liens passifs */
+    text-decoration: underline; /* Soulignement des liens */
+}
+
+a:visited {
+    color: black; /* Couleur des liens déjà visités */
+}
+
+a:hover {
+    color: black; /* Couleur des liens au survol */
+    text-decoration: underline; /* Soulignement des liens au survol */
+}
+
+a:active {
+    color: black; /* Couleur des liens cliqués */
+    text-decoration: underline; /* Soulignement des liens cliqués */
+}
+
 @keyframes leverRideau {
     0% {top : 0}
     80% {top : 0}
@@ -193,7 +212,7 @@ h1:hover, h2:hover {
 
     z-index : 10;
 
-    animation : leverRideau 4s ease;
+    animation : leverRideau 1s ease;
     pointer-events: auto;
 }
 
@@ -424,6 +443,7 @@ h1:hover, h2:hover {
     text-align: left;
     color : white;
     font-size : 1.2em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 
     overflow: auto;
 }
@@ -1194,9 +1214,26 @@ backdrop-filter: blur(20px);
         overflow-x: auto;
     }
 
+    #work-tile .glass-container .row:first-child .glass {
+        position : relative;
+    }
+
     .glass p {
+        position : absolute;
+        width : calc(100% - 60px);
+        height : calc(100% - 60px);
+        top : -41px;
+        left : 23px;
+        background-color : #ffffffC0;
+        color : black;
+        padding : 30px;
         display : none;
     }
+
+    .glass:hover p {
+        display : inline;
+    }
+
     /*
     #work-tile .glass-container .row .glass:hover p {
         display : block;
